@@ -3,6 +3,7 @@ import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import PokemonList from './pages/pokemon-list';
 import PokemonDetails from './pages/pokemon-details';
 import PageNotFound from './pages/page-not-found';
+import PokemonEdit from './pages/pokemon-edit';
 
 //router : met en place le système de navigation
 //route : permet de décrire chaque route de l'app
@@ -29,6 +30,7 @@ const App: FunctionComponent = () => {
                 <Switch>
                     <Route exact path='/' component={PokemonList} />
                     <Route exact path='/pokemons' component={PokemonList} />
+                    <Route path='/pokemons/edit/:id' component={PokemonEdit} />
                     <Route path='/pokemons/:id' component={PokemonDetails} />
                     <Route component={PageNotFound} />
                 </Switch>
