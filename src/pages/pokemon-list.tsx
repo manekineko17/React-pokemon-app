@@ -9,7 +9,12 @@ const PokemonList: FunctionComponent = () => {
     //hook d'effet avec 2 arguements : 1) fonction appellant l'état setPokemons auquel on passe la liste de pokemon à afficher
     //2) tableau vide : évite de déclencher le hook d'effet à chaque modification du composant
     useEffect(() => {
-        setPokemons(POKEMONS);
+        //on récupère les pokémons via l'api rest
+        fetch(`http://localhost:3001/pokemons`) //requête GET vers l'url
+            .then(response => response.json()) //récupèrer objet de type response,appliquer méthode json pr extraire ses données
+            .then((pokemons) => {
+                setPokemons(pokemons)
+            });  //on place les pokemons dans le state de notre composant
     }, []);
 
     return (
