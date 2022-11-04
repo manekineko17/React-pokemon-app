@@ -1,4 +1,7 @@
 # React-pokemon-app
 
-Lancer le projet : npm start
-L'ouverture de la page se fait toute seule sur localhost:3000
+Lancer le projet sur localhost:3000 :
+o npm start
+
+Lancer l'API sur localhost:3001 :
+o npm run start:api
