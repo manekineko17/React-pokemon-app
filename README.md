@@ -1,10 +1,10 @@
 # React-pokemon-app
 
 Launch local on localhost:3000 :
-o npm start
+npm start
 
 Launch the API on localhost:3001 :
-o npm run start:api
+npm run start:api
 
 Prod in progress
 
